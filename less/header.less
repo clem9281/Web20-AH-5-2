@@ -1,5 +1,10 @@
 header {
   background-color: @primary;
+  .custom-flex(space-between, center, wrap);
+  padding: 1rem 2rem;
+  @media @phone {
+    flex-direction: column;
+  }
   nav {
     a {
       color: white;
