@@ -1,0 +1,48 @@
+.top-content {
+  .custom-flex(space-between, center, wrap);
+  padding: 2rem 0;
+  img {
+    width: 48%;
+    border-radius: 5px;
+    @media @phone {
+      width: 100%;
+    }
+  }
+  .btn {
+    background: @primary;
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    width: 50%;
+    text-align: center;
+    border: 1px solid @primary;
+    cursor: pointer;
+    &:hover {
+      color: @primary;
+      background: white;
+    }
+    @media @phone {
+      width: 100%;
+    }
+  }
+  .text {
+    width: 48%;
+    @media @phone {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    h1 {
+      @media @phone {
+        text-align: center;
+      }
+    }
+    p {
+      margin: 2rem 0;
+      @media @phone {
+        display: none;
+      }
+    }
+  }
+}

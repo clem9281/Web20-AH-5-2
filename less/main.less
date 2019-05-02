@@ -1,11 +1,56 @@
-.box {
-  background: @secondary;
-  color: white;
-  text-align: center;
-  width: 30%;
-  margin: 2rem 0;
-  padding: 4rem 0;
-  i {
-    margin-bottom: 4rem;
+main {
+  @media @phone {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .middle {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    @media @phone {
+      border-bottom: none;
+    }
+    .boxes {
+      .custom-flex(space-between, center, wrap);
+      @media @phone {
+        display: block;
+      }
+      .box {
+        background: @secondary;
+        color: white;
+        text-align: center;
+        width: 30%;
+        margin: 2rem 0;
+        padding: 4rem 0;
+        @media @phone {
+          width: 100%;
+        }
+        i {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+  .bottom {
+    .custom-flex(space-between, flex-start, wrap);
+    @media @phone {
+      border-top: 1px solid black;
+      padding-top: 1rem;
+      flex-direction: column;
+    }
+    div {
+      width: 48%;
+      @media @phone {
+        width: 100%;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }

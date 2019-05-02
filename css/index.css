@@ -158,13 +158,111 @@ button {
 }
 header {
   background-color: #01579b;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
 }
 header nav a {
   color: white;
   text-decoration: none;
   padding-left: 1rem;
 }
-.box {
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.top-content img {
+  width: 48%;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  .top-content img {
+    width: 100%;
+  }
+}
+.top-content .btn {
+  background: #01579b;
+  font-size: 1.6rem;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 50%;
+  text-align: center;
+  border: 1px solid #01579b;
+  cursor: pointer;
+}
+.top-content .btn:hover {
+  color: #01579b;
+  background: white;
+}
+@media (max-width: 500px) {
+  .top-content .btn {
+    width: 100%;
+  }
+}
+.top-content .text {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  .top-content .text {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .top-content .text h1 {
+    text-align: center;
+  }
+}
+.top-content .text p {
+  margin: 2rem 0;
+}
+@media (max-width: 500px) {
+  .top-content .text p {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+}
+main .middle {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+@media (max-width: 500px) {
+  main .middle {
+    border-bottom: none;
+  }
+}
+main .middle .boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  main .middle .boxes {
+    display: block;
+  }
+}
+main .middle .boxes .box {
   background: #0277bd;
   color: white;
   text-align: center;
@@ -172,8 +270,40 @@ header nav a {
   margin: 2rem 0;
   padding: 4rem 0;
 }
-.box i {
+@media (max-width: 500px) {
+  main .middle .boxes .box {
+    width: 100%;
+  }
+}
+main .middle .boxes .box i {
   margin-bottom: 4rem;
+}
+main .bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  main .bottom {
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    flex-direction: column;
+  }
+}
+main .bottom div {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  main .bottom div {
+    width: 100%;
+  }
+  main .bottom div:first-child {
+    margin-bottom: 2rem;
+  }
+}
+main .bottom div h2 {
+  margin-bottom: 2rem;
 }
 footer {
   background: #01579b;

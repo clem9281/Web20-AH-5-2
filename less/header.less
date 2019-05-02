@@ -1,6 +1,13 @@
 header {
   background-color: @primary;
-
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  @media @phone {
+    flex-direction: column;
+  }
   nav {
     a {
       color: white;
